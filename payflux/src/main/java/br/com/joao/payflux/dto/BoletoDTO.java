@@ -12,7 +12,6 @@ import java.time.LocalDateTime;
 @Builder
 public class BoletoDTO {
 
-    private Long id;
     private String codigoBarras;
     private SituacaoBoleto situacaoBoleto;
     private LocalDateTime dataCriacao;

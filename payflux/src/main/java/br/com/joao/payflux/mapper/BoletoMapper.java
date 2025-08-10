@@ -1,6 +1,7 @@
 package br.com.joao.payflux.mapper;
 
-import br.com.joao.payflux.Boleto;
+
+import br.com.joao.avro.Boleto;
 import br.com.joao.payflux.dto.BoletoDTO;
 import br.com.joao.payflux.entity.BoletoEntity;
 

@@ -3,6 +3,7 @@ package br.com.joao.payflux.controller;
 import br.com.joao.payflux.dto.BoletoDTO;
 import br.com.joao.payflux.dto.BoletoRequestDTO;
 import br.com.joao.payflux.service.BoletoService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,7 +22,7 @@ public class BoletoController {
     }
 
     @PostMapping
-    public ResponseEntity<BoletoDTO> salvar(@RequestBody BoletoRequestDTO boletoRequestDTO) {
+    public ResponseEntity<BoletoDTO> salvar(@RequestBody @Valid BoletoRequestDTO boletoRequestDTO) {
         var boleto = boletoService.salvar(boletoRequestDTO.getCodigoBarras());
         return new ResponseEntity<>(boleto, HttpStatus.CREATED);
     }

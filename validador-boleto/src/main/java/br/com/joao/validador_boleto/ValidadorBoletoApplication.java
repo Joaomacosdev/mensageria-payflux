@@ -1,15 +1,13 @@
-package br.com.joao.payflux;
+package br.com.joao.validador_boleto;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.kafka.annotation.EnableKafka;
 
 @SpringBootApplication
-@EnableKafka
-public class PayfluxApplication {
+public class ValidadorBoletoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PayfluxApplication.class, args);
+		SpringApplication.run(ValidadorBoletoApplication.class, args);
 	}
 
 }
